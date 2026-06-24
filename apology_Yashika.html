@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sorry Yashika ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ffafbd,#ffc3a0);
+    font-family:Arial,sans-serif;
+    overflow:hidden;
+}
+.card{
+    background:white;
+    width:85%;
+    max-width:420px;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    animation:show 1s ease;
+}
+h1{
+    color:#ff4d6d;
+    font-size:42px;
+}
+p{
+    font-size:19px;
+    color:#555;
+    line-height:1.6;
+}
+button{
+    background:#ff4d6d;
+    color:white;
+    border:0;
+    padding:15px 30px;
+    border-radius:30px;
+    font-size:17px;
+    cursor:pointer;
+}
+.heart{
+    position:absolute;
+    font-size:25px;
+    animation:drop 5s linear infinite;
+}
+@keyframes show{
+from{transform:scale(0)}
+to{transform:scale(1)}
+}
+@keyframes drop{
+from{top:-10%}
+to{top:110%}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>I'm Sorry ❤️</h1>
+
+<p>
+Hey <b>Yashika</b> 🥹❤️
+<br><br>
+I’m sorry for everything.
+<br><br>
+I know I hurt you, and I truly regret it.
+I promise I will understand you better and
+I will never repeat it again ❤️❤️
+<br><br>
+You are special to me.
+Please forgive me 🥺💕
+</p>
+
+<button onclick="love()">Click Here ❤️</button>
+
+<p id="msg"></p>
+</div>
+
+<script>
+function love(){
+document.getElementById("msg").innerHTML =
+"Thank you Yashika ❤️🥹 I promise to keep you happy.";
+
+for(let i=0;i<30;i++){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"%";
+h.style.animationDuration=(3+Math.random()*3)+"s";
+document.body.appendChild(h);
+
+setTimeout(()=>{h.remove();},6000);
+}
+}
+</script>
+
+</body>
+</html>
